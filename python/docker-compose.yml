@@ -1,0 +1,48 @@
+services:
+  python_3.13.7:
+    image: python:3.13.7
+    user: root
+    volumes:
+      - ./data:/data
+    container_name: python_3137
+    entrypoint: ["sleep", "infinity"]
+  
+  python_3.12.11:
+    image: python:3.12.11
+    user: root
+    volumes:
+      - ./data:/data
+    container_name: python_31211
+    entrypoint: ["sleep", "infinity"]
+
+  python_3.11.13:
+    image: python:3.11.13
+    user: root
+    volumes:
+      - ./data:/data
+    container_name: python_31113
+    entrypoint: ["sleep", "infinity"]
+
+  python_3.10.18:
+    image: python:3.10.18
+    user: root
+    volumes:
+      - ./data:/data
+    container_name: python_31018
+    entrypoint: ["sleep", "infinity"]
+  
+  python_3.9.23:
+    image: python:3.9.23
+    user: root
+    volumes:
+      - ./data:/data
+    container_name: python_3923
+    entrypoint: ["sleep", "infinity"]
+
+  python_3.8.20:
+    image: python:3.8.20
+    user: root
+    volumes:
+      - ./data:/data
+    container_name: python_3820
+    entrypoint: ["sleep", "infinity"]
