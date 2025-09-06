@@ -1,0 +1,36 @@
+services:
+  cuda_13.0.0:
+    image: nvcr.io/nvidia/cuda:13.0.0-cudnn-devel-ubuntu24.04
+    runtime: nvidia
+    user: root
+    volumes:
+      - ./data:/data
+    container_name: docker_cuda_1300
+    entrypoint: ["sleep", "infinity"]
+  
+  cuda_12.9.1:
+    image: nvcr.io/nvidia/cuda:12.9.1-cudnn-devel-ubuntu24.04
+    runtime: nvidia
+    user: root
+    volumes:
+      - ./data:/data
+    container_name: docker_cuda_1291
+    entrypoint: ["sleep", "infinity"]
+
+  cuda_12.8.1:
+    image: nvcr.io/nvidia/cuda:12.8.1-cudnn-devel-ubuntu24.04
+    runtime: nvidia
+    user: root
+    volumes:
+      - ./data:/data
+    container_name: docker_cuda_1281
+    entrypoint: ["sleep", "infinity"]
+
+  cuda_12.6.3:
+    image: nvcr.io/nvidia/cuda:12.6.3-cudnn-devel-ubuntu24.04
+    runtime: nvidia
+    user: root
+    volumes:
+      - ./data:/data
+    container_name: docker_cuda_1263
+    entrypoint: ["sleep", "infinity"]
