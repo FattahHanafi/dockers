@@ -1,5 +1,27 @@
 services:
-  isaac-sim:
+  isaac_sim_5.0.0:
+    image: nvcr.io/nvidia/isaac-sim:5.0.0
+    runtime: nvidia
+    user: root
+    environment:
+      - DISPLAY=${DISPLAY}
+      - ACCEPT_EULA=Y
+      - PRIVACY_CONSENT=Y
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./assets/cache/ov:/root/.cache/ov
+      - ./assets/cache/pip:/root/.cache/pip
+      - ./assets/cache/glcache:/root/.cache/nvidia/GLCache
+      - ./assets/cache/computecache:/root/.nv/ComputeCache
+      - ./assets/cache/asset_browser:/isaac-sim/exts/isaacsim.asset.browser/cache
+      - ./assets/logs:/root/.nvidia-omniverse/logs
+      - ./assets/data:/root/.local/share/ov/data
+      - ./assets/pkg:/root/.local/share/ov/pkg
+      - ./assets/documents:/root/Documents
+    container_name: docker_isaac_sim_500
+    entrypoint: ["./runapp.sh"]
+
+  isaac_sim_455:
     image: nvcr.io/nvidia/isaac-sim:4.5.0
     runtime: nvidia
     user: root
@@ -18,6 +40,6 @@ services:
       - ./assets/data:/root/.local/share/ov/data
       - ./assets/pkg:/root/.local/share/ov/pkg
       - ./assets/documents:/root/Documents
-    container_name: docker_isaac_sim
+    container_name: docker_isaac_sim_455
     entrypoint: ["./runapp.sh"]
 
