@@ -1,0 +1,32 @@
+services:
+  ros2_rolling:
+    image: ros:rolling-perception
+    user: root
+    volumes:
+      - ./data:/data
+    container_name: docker_rolling
+    entrypoint: ["sleep", "infinity"]
+  
+  ros2_kilted:
+    image: ros:kilted-perception
+    user: root
+    volumes:
+      - ./data:/data
+    container_name: docker_kilted
+    entrypoint: ["sleep", "infinity"]
+
+  ros2_jazzy:
+    image: ros:jazzy-perception
+    user: root
+    volumes:
+      - ./data:/data
+    container_name: docker_jazzy
+    entrypoint: ["sleep", "infinity"]
+
+  ros2_humble:
+    image: ros:humble-perception
+    user: root
+    volumes:
+      - ./data:/data
+    container_name: docker_humble
+    entrypoint: ["sleep", "infinity"]
