@@ -3,7 +3,7 @@ services:
     image: ros:rolling-perception
     user: root
     volumes:
-      - ./data:/data
+      - ./data/rolling:/data
     container_name: docker_rolling
     entrypoint: ["sleep", "infinity"]
   
@@ -11,7 +11,7 @@ services:
     image: ros:kilted-perception
     user: root
     volumes:
-      - ./data:/data
+      - ./data/kilted:/data
     container_name: docker_kilted
     entrypoint: ["sleep", "infinity"]
 
@@ -19,7 +19,7 @@ services:
     image: ros:jazzy-perception
     user: root
     volumes:
-      - ./data:/data
+      - ./data/jazzy:/data
     container_name: docker_jazzy
     entrypoint: ["sleep", "infinity"]
 
@@ -27,6 +27,6 @@ services:
     image: ros:humble-perception
     user: root
     volumes:
-      - ./data:/data
+      - ./data/humble:/data
     container_name: docker_humble
     entrypoint: ["sleep", "infinity"]
